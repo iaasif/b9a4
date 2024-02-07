@@ -1,6 +1,5 @@
 /*function signature/sample */
 function monthlySavings(arr, livingCost) {
-
     // You have to write your code here
     // let allPayment = [];
     if (Array.isArray(arr) && typeof livingCost == "number") {
@@ -9,13 +8,10 @@ function monthlySavings(arr, livingCost) {
             if (i >= 3000) {
                 let tax = totalEarn * (20 / 100);
                 totalEarn += i - tax;
-
             }
             else {
                 totalEarn += i;
             }
-
-
         }
         let savings = totalEarn - livingCost;
         if (savings < 0) {
@@ -26,9 +22,4 @@ function monthlySavings(arr, livingCost) {
     else {
         return "invalid input"
     }
-
-
 }
-
-
-console.log(monthlySavings([900, 2700, 3400], 10000));
